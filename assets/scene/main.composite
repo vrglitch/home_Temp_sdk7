@@ -871,7 +871,7 @@
           "json": {
             "position": {
               "x": 46.5099983215332,
-              "y": 0.9100000262260437,
+              "y": 1.0099999904632568,
               "z": 85.75
             },
             "rotation": {
@@ -912,20 +912,20 @@
         "552": {
           "json": {
             "position": {
-              "x": 53.33269119262695,
+              "x": 53.214012145996094,
               "y": 0.9698935151100159,
-              "z": 48.05695343017578
-            },
-            "scale": {
-              "x": 1,
-              "y": 1,
-              "z": 1
+              "z": 48.286251068115234
             },
             "rotation": {
               "x": 0,
               "y": 0,
               "z": 0,
               "w": 1
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
             },
             "parent": 0
           }
@@ -1712,7 +1712,49 @@
             "position": {
               "x": 84.15428924560547,
               "y": 2.603079080581665,
-              "z": 68.57400512695312
+              "z": 68.56472778320312
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "parent": 0
+          }
+        },
+        "595": {
+          "json": {
+            "position": {
+              "x": 57.13111877441406,
+              "y": 0.5706790685653687,
+              "z": 72.3900375366211
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "scale": {
+              "x": 0.6168257594108582,
+              "y": 0.6168257594108582,
+              "z": 0.6168257594108582
+            },
+            "parent": 0
+          }
+        },
+        "596": {
+          "json": {
+            "position": {
+              "x": 57.16600799560547,
+              "y": 0.5324106216430664,
+              "z": 72.50385284423828
             },
             "rotation": {
               "x": 0,
@@ -2230,6 +2272,20 @@
           }
         },
         "594": {
+          "json": {
+            "src": "assets/builder/click_area/click_area.glb",
+            "visibleMeshesCollisionMask": 1,
+            "invisibleMeshesCollisionMask": 0
+          }
+        },
+        "595": {
+          "json": {
+            "src": "assets/scene/fireParticles.glb",
+            "visibleMeshesCollisionMask": 1,
+            "invisibleMeshesCollisionMask": 2
+          }
+        },
+        "596": {
           "json": {
             "src": "assets/builder/click_area/click_area.glb",
             "visibleMeshesCollisionMask": 1,
@@ -2782,7 +2838,17 @@
         },
         "594": {
           "json": {
-            "value": "Click Area"
+            "value": "Click Area Fire 1"
+          }
+        },
+        "595": {
+          "json": {
+            "value": "fireParticles.glb"
+          }
+        },
+        "596": {
+          "json": {
+            "value": "Click Area Fire 1"
           }
         }
       }
@@ -2807,6 +2873,11 @@
           }
         },
         "594": {
+          "json": {
+            "visible": false
+          }
+        },
+        "596": {
           "json": {
             "visible": false
           }
@@ -3374,6 +3445,20 @@
               }
             ]
           }
+        },
+        "595": {
+          "json": {
+            "states": [
+              {
+                "clip": "Animation",
+                "playing": false,
+                "weight": 1,
+                "speed": 1,
+                "loop": false,
+                "shouldReset": false
+              }
+            ]
+          }
         }
       }
     },
@@ -3837,7 +3922,9 @@
                   590,
                   591,
                   593,
-                  594
+                  594,
+                  595,
+                  596
                 ]
               },
               {
@@ -4150,6 +4237,14 @@
               },
               {
                 "entity": 594,
+                "children": []
+              },
+              {
+                "entity": 595,
+                "children": []
+              },
+              {
+                "entity": 596,
                 "children": []
               }
             ]
@@ -4524,6 +4619,43 @@
               }
             ]
           }
+        },
+        "595": {
+          "json": {
+            "id": 15,
+            "value": [
+              {
+                "name": "firegoOff",
+                "type": "set_state",
+                "jsonPayload": "{\"state\":\"fireOff\"}"
+              },
+              {
+                "name": "firegoOn",
+                "type": "set_state",
+                "jsonPayload": "{\"state\":\"fireOn\"}"
+              },
+              {
+                "name": "fireVisible",
+                "type": "set_visibility",
+                "jsonPayload": "{\"visible\":true}"
+              },
+              {
+                "name": "fireIvisible",
+                "type": "set_visibility",
+                "jsonPayload": "{\"visible\":false}"
+              },
+              {
+                "name": "fireAnimOn",
+                "type": "play_animation",
+                "jsonPayload": "{\"animation\":\"Animation\",\"loop\":true}"
+              },
+              {
+                "name": "fireAnimOff",
+                "type": "stop_animation",
+                "jsonPayload": "{}"
+              }
+            ]
+          }
         }
       }
     },
@@ -4547,7 +4679,7 @@
         "0": {
           "json": {
             "id": 0,
-            "value": 14
+            "value": 16
           }
         }
       }
@@ -5032,6 +5164,80 @@
               }
             ]
           }
+        },
+        "596": {
+          "json": {
+            "value": [
+              {
+                "type": "on_click",
+                "conditions": [
+                  {
+                    "id": 16,
+                    "type": "when_state_is",
+                    "value": "fireOff"
+                  }
+                ],
+                "actions": [
+                  {
+                    "id": 15,
+                    "name": "firegoOn"
+                  },
+                  {
+                    "id": 15,
+                    "name": "fireVisible"
+                  },
+                  {
+                    "id": 15,
+                    "name": "fireAnimOn"
+                  }
+                ]
+              },
+              {
+                "type": "on_click",
+                "conditions": [
+                  {
+                    "id": 16,
+                    "type": "when_state_is",
+                    "value": "fireOn"
+                  }
+                ],
+                "operation": "and",
+                "actions": [
+                  {
+                    "id": 15,
+                    "name": "firegoOff"
+                  },
+                  {
+                    "id": 15,
+                    "name": "fireIvisible"
+                  },
+                  {
+                    "id": 15,
+                    "name": "fireAnimOff"
+                  }
+                ]
+              },
+              {
+                "type": "on_spawn",
+                "conditions": [],
+                "operation": "and",
+                "actions": [
+                  {
+                    "id": 15,
+                    "name": "fireAnimOn"
+                  },
+                  {
+                    "id": 15,
+                    "name": "firegoOn"
+                  },
+                  {
+                    "id": 15,
+                    "name": "fireVisible"
+                  }
+                ]
+              }
+            ]
+          }
         }
       }
     },
@@ -5130,6 +5336,16 @@
               "paryLightOn"
             ],
             "defaultValue": "paryLightOff"
+          }
+        },
+        "595": {
+          "json": {
+            "id": 16,
+            "value": [
+              "fireOff",
+              "fireOn"
+            ],
+            "defaultValue": "fireOff"
           }
         }
       }
@@ -5383,6 +5599,12 @@
           "json": {}
         },
         "594": {
+          "json": {}
+        },
+        "595": {
+          "json": {}
+        },
+        "596": {
           "json": {}
         }
       }
