@@ -440,9 +440,9 @@
               "w": 1
             },
             "scale": {
-              "x": 0.30000001192092896,
-              "y": 0.30000001192092896,
-              "z": 0.30000001192092896
+              "x": 1,
+              "y": 1,
+              "z": 1
             },
             "parent": 0
           }
@@ -1224,27 +1224,6 @@
             "parent": 0
           }
         },
-        "567": {
-          "json": {
-            "position": {
-              "x": 57.22999954223633,
-              "y": 0.4699999988079071,
-              "z": 72.5
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "scale": {
-              "x": 0.8399999737739563,
-              "y": 0.8399999737739563,
-              "z": 0.8399999737739563
-            },
-            "parent": 0
-          }
-        },
         "568": {
           "json": {
             "position": {
@@ -1357,16 +1336,16 @@
               "y": 2.9400086402893066,
               "z": 59.763004302978516
             },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
             "rotation": {
               "x": 0,
               "y": 0,
               "z": 0,
               "w": 1
-            },
-            "scale": {
-              "x": 1,
-              "y": 1,
-              "z": 1
             },
             "parent": 0
           }
@@ -1380,9 +1359,9 @@
             },
             "rotation": {
               "x": 0,
-              "y": 0,
+              "y": 1,
               "z": 0,
-              "w": 1
+              "w": 6.123234262925839e-17
             },
             "scale": {
               "x": 8.050000190734863,
@@ -2131,13 +2110,6 @@
             "invisibleMeshesCollisionMask": 2
           }
         },
-        "567": {
-          "json": {
-            "src": "assets/scene/fireParticles.glb",
-            "visibleMeshesCollisionMask": 1,
-            "invisibleMeshesCollisionMask": 2
-          }
-        },
         "568": {
           "json": {
             "src": "assets/scene/fireParticles.glb",
@@ -2693,11 +2665,6 @@
             "value": "BeanBagChair.glb"
           }
         },
-        "567": {
-          "json": {
-            "value": "fireParticles.glb"
-          }
-        },
         "568": {
           "json": {
             "value": "fireParticles.glb"
@@ -3124,20 +3091,6 @@
             ]
           }
         },
-        "567": {
-          "json": {
-            "states": [
-              {
-                "clip": "Animation",
-                "playing": true,
-                "weight": 1,
-                "speed": 1,
-                "loop": true,
-                "shouldReset": false
-              }
-            ]
-          }
-        },
         "568": {
           "json": {
             "states": [
@@ -3437,7 +3390,7 @@
         "serializationType": "map"
       },
       "data": {
-        "594": {
+        "529": {
           "json": {
             "gizmo": 0
           }
@@ -3861,7 +3814,6 @@
                   564,
                   565,
                   566,
-                  567,
                   568,
                   569,
                   570,
@@ -4102,10 +4054,6 @@
               },
               {
                 "entity": 566,
-                "children": []
-              },
-              {
-                "entity": 567,
                 "children": []
               },
               {
@@ -5363,9 +5311,6 @@
           "json": {}
         },
         "566": {
-          "json": {}
-        },
-        "567": {
           "json": {}
         },
         "568": {
