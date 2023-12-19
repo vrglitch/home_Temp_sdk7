@@ -3,8 +3,7 @@ import { } from '@dcl/sdk/math'
 import { Animator, AudioSource, AvatarAttach, GltfContainer, Transform, VisibilityComponent, engine, pointerEventsSystem, Material, VideoPlayer } from '@dcl/sdk/ecs'
 import { initAssetPacks } from '@dcl/asset-packs/dist/scene-entrypoint'
 
-import { changeColorSystem, circularSystem } from './systems'
-import { setupUi } from './ui'
+
 
 // You can remove this if you don't use any asset packs
 initAssetPacks(engine, pointerEventsSystem, {
@@ -18,11 +17,6 @@ initAssetPacks(engine, pointerEventsSystem, {
   VideoPlayer
 })
 
-export function main() {
-  // Defining behavior. See `src/systems.ts` file.
-  // engine.addSystem(circularSystem)
-  // engine.addSystem(changeColorSystem)
+// export function main() {
 
-  // draw UI. Here is the logic to spawn cubes.
-  //setupUi()
-}
+// }

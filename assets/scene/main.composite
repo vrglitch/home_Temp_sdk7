@@ -132,27 +132,6 @@
             "parent": 0
           }
         },
-        "515": {
-          "json": {
-            "position": {
-              "x": 77.53024291992188,
-              "y": 3.2031006813049316,
-              "z": 76.03409576416016
-            },
-            "scale": {
-              "x": 1,
-              "y": 1,
-              "z": 1
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "parent": 0
-          }
-        },
         "516": {
           "json": {
             "position": {
@@ -233,6 +212,27 @@
               "y": -0.18909543752670288,
               "z": 0,
               "w": 0.9819586873054504
+            },
+            "parent": 0
+          }
+        },
+        "520": {
+          "json": {
+            "position": {
+              "x": 85.8532485961914,
+              "y": 1.0840063095092773,
+              "z": 98.87456512451172
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
             },
             "parent": 0
           }
@@ -412,16 +412,16 @@
               "y": 8.670000076293945,
               "z": 68.66999816894531
             },
-            "scale": {
-              "x": 0.5,
-              "y": 0.5,
-              "z": 0.5
-            },
             "rotation": {
               "x": 0,
               "y": 0,
               "z": 0,
               "w": 1
+            },
+            "scale": {
+              "x": 0.10000000149011612,
+              "y": 0.10000000149011612,
+              "z": 0.10000000149011612
             },
             "parent": 0
           }
@@ -2614,13 +2614,6 @@
             "invisibleMeshesCollisionMask": 2
           }
         },
-        "515": {
-          "json": {
-            "src": "assets/scene/DJdeckTable.glb",
-            "visibleMeshesCollisionMask": 1,
-            "invisibleMeshesCollisionMask": 2
-          }
-        },
         "516": {
           "json": {
             "src": "assets/scene/ExteriorFireplace.glb",
@@ -2645,6 +2638,13 @@
         "519": {
           "json": {
             "src": "assets/scene/partyLight01.glb",
+            "visibleMeshesCollisionMask": 1,
+            "invisibleMeshesCollisionMask": 2
+          }
+        },
+        "520": {
+          "json": {
+            "src": "assets/scene/LampPostBig.glb",
             "visibleMeshesCollisionMask": 1,
             "invisibleMeshesCollisionMask": 2
           }
@@ -2708,8 +2708,8 @@
         "529": {
           "json": {
             "src": "assets/scene/discoBall.glb",
-            "visibleMeshesCollisionMask": 1,
-            "invisibleMeshesCollisionMask": 2
+            "visibleMeshesCollisionMask": 0,
+            "invisibleMeshesCollisionMask": 0
           }
         },
         "530": {
@@ -3550,11 +3550,6 @@
             "value": "HomeTemplate_MainStructure.glb"
           }
         },
-        "515": {
-          "json": {
-            "value": "DJdeckTable.glb"
-          }
-        },
         "516": {
           "json": {
             "value": "ExteriorFireplace.glb"
@@ -3573,6 +3568,11 @@
         "519": {
           "json": {
             "value": "partyLight01.glb"
+          }
+        },
+        "520": {
+          "json": {
+            "value": "LampPostBig.glb"
           }
         },
         "521": {
@@ -3612,12 +3612,12 @@
         },
         "528": {
           "json": {
-            "value": "deskChair.glb"
+            "value": "DeskChair.glb"
           }
         },
         "529": {
           "json": {
-            "value": "discoBall.glb"
+            "value": "DiscoBall.glb"
           }
         },
         "530": {
@@ -4278,20 +4278,6 @@
         "protocolBuffer": "PBAnimator"
       },
       "data": {
-        "515": {
-          "json": {
-            "states": [
-              {
-                "clip": "Animation",
-                "playing": false,
-                "weight": 1,
-                "speed": 1,
-                "loop": false,
-                "shouldReset": false
-              }
-            ]
-          }
-        },
         "518": {
           "json": {
             "states": [
@@ -4759,7 +4745,7 @@
         "serializationType": "map"
       },
       "data": {
-        "588": {
+        "529": {
           "json": {
             "gizmo": 0
           }
@@ -5142,7 +5128,6 @@
                   527,
                   528,
                   529,
-                  515,
                   516,
                   521,
                   530,
@@ -5247,7 +5232,8 @@
                   631,
                   632,
                   633,
-                  634
+                  634,
+                  520
                 ]
               },
               {
@@ -5300,10 +5286,6 @@
               },
               {
                 "entity": 529,
-                "children": []
-              },
-              {
-                "entity": 515,
                 "children": []
               },
               {
@@ -5725,6 +5707,10 @@
               {
                 "entity": 634,
                 "children": []
+              },
+              {
+                "entity": 520,
+                "children": []
               }
             ]
           }
@@ -5799,7 +5785,7 @@
               },
               {
                 "type": "set_visibility",
-                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"visible\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"},\"physicsCollider\":{\"type\":\"boolean\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"}}},\"serializationType\":\"map\"}"
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"visible\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"},\"physicsCollider\":{\"type\":\"boolean\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"}},\"collider\":{\"type\":\"integer\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"integer\",\"enum\":[0,1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768],\"default\":1,\"serializationType\":\"enum-int\",\"enumObject\":{\"0\":\"CL_NONE\",\"1\":\"CL_POINTER\",\"2\":\"CL_PHYSICS\",\"4\":\"CL_RESERVED1\",\"8\":\"CL_RESERVED2\",\"16\":\"CL_RESERVED3\",\"32\":\"CL_RESERVED4\",\"64\":\"CL_RESERVED5\",\"128\":\"CL_RESERVED6\",\"256\":\"CL_CUSTOM1\",\"512\":\"CL_CUSTOM2\",\"1024\":\"CL_CUSTOM3\",\"2048\":\"CL_CUSTOM4\",\"4096\":\"CL_CUSTOM5\",\"8192\":\"CL_CUSTOM6\",\"16384\":\"CL_CUSTOM7\",\"32768\":\"CL_CUSTOM8\",\"CL_NONE\":0,\"CL_POINTER\":1,\"CL_PHYSICS\":2,\"CL_RESERVED1\":4,\"CL_RESERVED2\":8,\"CL_RESERVED3\":16,\"CL_RESERVED4\":32,\"CL_RESERVED5\":64,\"CL_RESERVED6\":128,\"CL_CUSTOM1\":256,\"CL_CUSTOM2\":512,\"CL_CUSTOM3\":1024,\"CL_CUSTOM4\":2048,\"CL_CUSTOM5\":4096,\"CL_CUSTOM6\":8192,\"CL_CUSTOM7\":16384,\"CL_CUSTOM8\":32768}}}},\"serializationType\":\"map\"}"
               },
               {
                 "type": "attach_to_player",
@@ -5987,6 +5973,16 @@
                 "name": "visibilityOn",
                 "type": "set_visibility",
                 "jsonPayload": "{\"visible\":true}"
+              },
+              {
+                "name": "scaleUP",
+                "type": "start_tween",
+                "jsonPayload": "{\"type\":\"scale_item\",\"end\":{\"x\":0.7,\"y\":0.7,\"z\":0.7},\"relative\":false,\"interpolationType\":\"easeinsine\",\"duration\":\"0.20\"}"
+              },
+              {
+                "name": "scaleDown",
+                "type": "start_tween",
+                "jsonPayload": "{\"type\":\"scale_item\",\"end\":{\"x\":0.1,\"y\":0.1,\"z\":0.1},\"relative\":false,\"interpolationType\":\"easeinsine\",\"duration\":\"0.40\"}"
               }
             ]
           }
@@ -6533,6 +6529,10 @@
                   {
                     "id": 5,
                     "name": "ballAnim"
+                  },
+                  {
+                    "id": 5,
+                    "name": "scaleUP"
                   }
                 ]
               },
@@ -6852,9 +6852,6 @@
         "514": {
           "json": {}
         },
-        "515": {
-          "json": {}
-        },
         "516": {
           "json": {}
         },
@@ -6865,6 +6862,9 @@
           "json": {}
         },
         "519": {
+          "json": {}
+        },
+        "520": {
           "json": {}
         },
         "521": {
